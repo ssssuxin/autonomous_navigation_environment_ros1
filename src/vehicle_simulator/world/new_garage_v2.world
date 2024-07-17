@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <pose frame=''>0 0 1.0 0 -0 0</pose>
+      <uri>model://new_garage_v2</uri>
+    </include>
+    
+    <model name="wall">
+      <static>true</static>
+      <pose>3 3 3.7  0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>18 18 0.3</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>18 18 0.3</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wall</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall2">
+      <static>true</static>
+      <pose>0 83.5 2  0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>10 0.3 3</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 0.3 4</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wall</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall3">
+      <static>true</static>
+      <pose> 45.6 25.8 21  0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>20 7 0.3</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>20 7 0.3</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wall</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall4">
+      <static>true</static>
+      <pose> 46.16 63.329 5.25  0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>18 0.3 1.5</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>18 0.3 1.5</size> <!-- Dimensions of the wall: width, depth, height -->
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wall</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"/>
+
+    
+  </world>
+</sdf>
